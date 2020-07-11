@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 20) {
             Text("Guess which tweets are real!").bold().font(.title).foregroundColor(.gray)
-            Image(gameController.tweets[count].imageName).resizable().frame(width: UIScreen.main.bounds.width - 10, height: 100).scaledToFit()
+            Image(gameController.tweets[count].imageName).resizable().scaledToFit().frame(minWidth: UIScreen.main.bounds.width - 10, maxWidth: UIScreen.main.bounds.width - 10).frame(height: 200)
             
             Text("Score: \(score)")
             
